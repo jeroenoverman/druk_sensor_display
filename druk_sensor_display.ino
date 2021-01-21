@@ -196,7 +196,8 @@ void loop()
 
     measurements.Loop();
 
-    if (millis() > 10 * 60 * 1000 && clearedCalibratedFlag == 0) // 10 minutes
+    if (millis() > 1 * 60 * 1000 && clearedCalibratedFlag == 0) 
+    // 1 minutes || Millis on arduino nano can count to about a minute before they rollover
     {
         clearedCalibratedFlag = 1;
         WriteIsCalbratedFlagToEeprom(0);

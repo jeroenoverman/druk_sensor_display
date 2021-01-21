@@ -100,7 +100,7 @@ void MemoryBuffer<N>::_recalculateMinMax()
 {
     _maxValue = _minValue = _values[_getArrayIndex(-1)];
     _maxIndex = _minIndex = _getArrayIndex(-1);
-    for (uint8_t i = 0; i < (_size - 1); i++)
+    for (uint16_t i = 0; i < (_size - 1); i++)
     {
         int16_t currentIndex = _getArrayIndex(i);
         uint16_t currentValue = _values[currentIndex];

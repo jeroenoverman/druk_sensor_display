@@ -5,6 +5,7 @@ PressureSensor::PressureSensor(/* args */)
     _voltageScalar = 5.0 / 1024;
     _voltageOffset = 0;
     _kpaScalar = (250 - 20) / (4.65 - 0.4);
+    _kpaScalar /= 1.18; // calibrated for sensor from aliExpress
     _kpaOffset = 20 - _kpaScalar * 0.4;
     _barScalar = 0.01;
     _barOffset = -1;
